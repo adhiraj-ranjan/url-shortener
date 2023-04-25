@@ -1,0 +1,92 @@
+/* Reset default margin and padding */
+body, form, input, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+  }
+  
+  .title {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .form {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .btn {
+    width: 20%;
+    height: 40px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background-color: #0064cf;
+    color: #ccc7c7;
+  }
+  .flash-message {
+    position: fixed;
+    top: 8px; /* Update the top padding as needed */
+    left: 10px; /* Update the left padding as needed */
+    right: 10px; /* Update the right padding as needed */
+    padding: 20px;
+    text-align: center;
+    background-color: #ffdddd;
+    color: #000;
+    font-size: 18px;
+    border-radius: 8px; /* Add rounded corners */
+    display: none;
+  }
+  .result {
+    display: none;
+    width: 40%;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: overlay;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+  }
+
+@media screen and (max-width: 768px) {
+    .form{
+      width: 80%;
+    }
+    .btn{
+      width: 30%;
+    }
+    .flash-message {
+      font-size: 15px;
+    }
+    .result{
+      width: 60%;
+    }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>safe URL Shortener</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">URL Shortener</h1>
+    <form class="form" id="submitForm">
+      <input type="text" id="long-url" class="input" placeholder="Enter long URL" required>
+      <input type="text" id="alias" class="input" placeholder="Custom alias (optional)">
+      <button type="submit" class="btn" id="submitButton">Shorten</button>
+    </form>
+    
+    <div id="result" class="result"></div>
+  </div>
+  <div id="flash-message" class="flash-message"></div>
+</body>
+
+<script src="{{ url_for('static',filename='scripts/index.js') }}"></script>
+
+</html>
