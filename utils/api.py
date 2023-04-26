@@ -29,3 +29,18 @@ def get_redirection_url(alias):
         return info['url']
     else:
         return False
+
+
+def perform_cleanup():
+    data = route.get()
+    if data:
+        removed_lst = []
+        current_stamp = int(time.time())
+        for key in data.keys():
+            if (current_stamp - route.child(key).get()['timestamp']) > 6015770000: # 6 months
+                route.child(key).delete()
+                removed_lst.append(key)
+        return {"response": {"removed_aliases": removed_lst}}
+    else:
+        return {"response": "no data found"}
+                

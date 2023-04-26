@@ -27,6 +27,9 @@ def shorten_url():
 def favicon():
     return send_from_directory(app.static_folder, 'url.png', mimetype='image/vnd.microsoft.icon')
 
+@app.route("/admin/cleanup_database")
+def cleanup():
+    return api.perform_cleanup()
 
 @app.route('/<path:value>')
 def re_route(value):
@@ -35,7 +38,6 @@ def re_route(value):
         return redirect(url)
     else:
         return jsonify({"status": "not found"})
-
 
 
 if __name__ == '__main__':
