@@ -82,6 +82,7 @@ body, form, input, button {
     overflow-x: overlay;
     background-color: #111;
     color: #fff;
+    margin-bottom: 15px;
     text-align: center;
     cursor: pointer;
   }
