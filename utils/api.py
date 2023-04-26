@@ -24,7 +24,7 @@ def create_route(alias, url):
 
 def get_redirection_url(alias):
     info = route.child(alias).get()
-    if info:
+    if 'url' in info:
         route.child(alias).update({"timestamp": int(time.time())})
         return info['url']
     else:

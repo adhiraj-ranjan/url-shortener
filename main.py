@@ -17,7 +17,7 @@ def shorten_url():
         if not alias:
             alias = extras.get_string()
         if api.create_route(alias, long_url):
-            return jsonify({"status": "ok", "response": "route is created", "url": f'{request.scheme}://{request.host}/{alias}'})
+            return jsonify({"status": "ok", "response": "route is created", "url": f'https://{request.host}/{alias}'})
         else:
             return jsonify({"status": "fail", "response": "THIS ALIAS IS NOT AVAILABLE"})
     else:
@@ -39,5 +39,4 @@ def re_route(value):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",
-threaded=True)
+    app.run(host="0.0.0.0", threaded=True)

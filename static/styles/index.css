@@ -62,8 +62,17 @@ body, form, input, button {
     background-color: #ffdddd;
     color: #000;
     font-size: 18px;
+    margin-bottom: 15px;
     border-radius: 8px; /* Add rounded corners */
     display: none;
+  }
+  #info{
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffcc;
+    color: #000;
+    font-size: 18px;
+    border-radius: 8px; /* Add rounded corners */
   }
   .result {
     display: none;
@@ -74,8 +83,12 @@ body, form, input, button {
     background-color: #111;
     color: #fff;
     text-align: center;
+    cursor: pointer;
   }
 
+  .result:hover{
+    background-color: #191919;
+  }
 @media screen and (max-width: 768px) {
     .form{
       width: 80%;
@@ -88,5 +101,9 @@ body, form, input, button {
     }
     .result{
       width: 60%;
+    }
+    #info{
+      width: 65%;
+      font-size: 14px;
     }
 }
