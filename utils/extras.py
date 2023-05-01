@@ -16,3 +16,10 @@ def is_valid_url(url):
             return False
     except ValueError:
         return False
+
+def has_illegal_characters(key):
+    illegal_characters = ['.', '#', '$', '[', ']', '/', '\n', '\r', '\t', '?']
+    for character in key:
+        if character in illegal_characters:
+            return True
+    return False

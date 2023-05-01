@@ -16,12 +16,15 @@ def shorten_url():
     if extras.is_valid_url(long_url):
         if not alias:
             alias = extras.get_string()
+        else:
+            if extras.has_illegal_characters(alias):
+                return jsonify({"status": "fail", "response": "Some Special Chars are Not Allowed"})
         if api.create_route(alias, long_url):
             return jsonify({"status": "ok", "response": "route is created", "url": f'https://{request.host}/{alias}'})
         else:
-            return jsonify({"status": "fail", "response": "THIS ALIAS IS NOT AVAILABLE"})
+            return jsonify({"status": "fail", "response": "This Alias is Not Availaible"})
     else:
-        return jsonify({"status": "fail", "response": "URL IS INVALID"})
+        return jsonify({"status": "fail", "response": "URL is Invalid"})
 
 @app.route('/favicon.ico')
 def favicon():
