@@ -3,7 +3,7 @@
     "short_name": "Surl",
     "start_url": "/",
     "background_color": "#000",
-    "display": "browser",
+    "display": "standalone",
     "icons": [
         {
             "src": "static/url-192x192.png",
