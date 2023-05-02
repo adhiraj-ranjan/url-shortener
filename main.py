@@ -34,6 +34,10 @@ def favicon():
 def cleanup():
     return api.perform_cleanup()
 
+@app.route('/manifest.json')
+def web_manifest():
+    return app.send_static_file("manifest.json")
+    
 @app.route('/<path:value>')
 def re_route(value):
     url = api.get_redirection_url(value)
