@@ -1,6 +1,9 @@
 ### URL Shortener Web App
 This is a simple but fast and powerful URL shortener web app built using Flask (a Python web framework) and Firebase Realtime Database (a NoSQL cloud database). It allows users to create short URLs for long URLs, making it easier to share and manage links.
 
+## Ready to use instance
+<a href=https://safeurl.onrender.com>https://safeurl.onrender.com</a>
+
 ## Features
 * Shorten long URLs: Users can enter a long URL and generate a short URL, which redirects to the original long URL.
 *. Custom short URLs: Users can customize the generated short URL to their preference.
