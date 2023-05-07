@@ -17,7 +17,7 @@ This is a simple but fast and powerful URL shortener web app built using Flask (
 1. Clone the repository to your local machine.
 2. Install the required Python packages using pip: `pip install -r requirements.txt`
 3. Create a Firebase project and obtain the Firebase credentials (service account key) in JSON format.
-4. Replace the fields in api/datamng.py with your base64 encoded Firebase JSON credentials and your Firebase realtime database url.
+4. Replace the fields in utils/api.py with your base64 encoded Firebase JSON credentials and your Firebase realtime database url.
 5. Run the Flask application
 6. Open your web browser and go to http://localhost:5000 to access the web app.
 
