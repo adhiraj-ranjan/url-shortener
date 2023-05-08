@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify, redirect, send_from_directory
 from utils import extras
 from utils import api
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -48,4 +49,4 @@ def re_route(value):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", threaded=True)
+    serve(app, host='0.0.0.0')
